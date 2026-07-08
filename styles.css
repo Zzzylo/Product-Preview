@@ -1,0 +1,67 @@
+:root {
+  /* Primary Colors */
+  --Green-500: hsl(158, 36%, 37%);
+  --Green-700: hsl(158, 42%, 18%);
+  /* Neutral Colors */
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+  /* Font fam */
+  --ff-body: "Montserrat", sans-serif;
+  --ff-heading: "Fraunces", serif;
+  /* Font weight */
+  --fw-regular: 500;
+  --fw-bold: 700;
+  /*max-content-width*/
+  --max-content-width: 69.375rem;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--Cream);
+  font-family: var(--ff-body);
+  font-weight: var(--fw-regular);
+  font-size: 0.875rem;
+  color: var(--Grey);
+  min-height: 100dvh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+main {
+  padding: 1rem;
+}
+.wrapper {
+  max-width: var(--max-content-width);
+  margin: 1rem 1rem;
+  overflow: hidden;
+  background-color: var(--White);
+  border-radius: 0.5rem;
+}
+.wrapper img {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.text-wrapper {
+  padding: 2rem;
+}
+.text-wrapper button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--White);
+  background-color: var(--Green-500);
+}

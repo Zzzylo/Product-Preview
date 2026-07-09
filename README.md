@@ -1,6 +1,6 @@
 # Frontend Mentor - Product preview card component solution
 
-This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is my solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -12,10 +12,8 @@ This is a solution to the [Product preview card component challenge on Frontend 
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -28,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](WebsiteScreenshot.png)
+![](image.png)
 
 ### Links
 
@@ -36,7 +34,15 @@ Users should be able to:
 
 ## My process
 
-First, I built the html structure properly to make the styling easier. After that, I did the mobile layout for a ton of minutes because it was hard figuring out how to build a responsive mobile layout first even without media query. After that I fixed that html image and I put a picture element to make it responsive and show different pictures depending on screen sizes. After doing that, I built the media query for desktop view and I eyeballed in what pixel I should add it using the devtools in chrome to track where my mobile layout breaks and starts looking ugly. It took me a while fixing the image responsiveness because I forgot the necessary components I need to add to its styling to make it work but after hours, I figured out how to make it more flexible and how to adjust it based on screen sizes. After all of that, I finally put a box shadow to the container and a hover and focus effect on the button to make it look better.
+First, I built the HTML structure so the styling part would be easier later. Then I did the mobile layout for a long time, without touching media queries at all. It was hard figuring out a responsive layout before even adding breakpoints.
+
+After that I worked on the image. I used a `<picture>` element with a `<source>` tag so it shows a different image depending on screen size, instead of forcing one image to look good everywhere.
+
+Then I built the desktop media query. I didn't just use a common breakpoint like 768px, I resized my browser in Chrome DevTools and watched for the exact point where my mobile layout started looking cramped, then used that pixel value.
+
+Making the image responsive took the most time out of everything. I kept forgetting what combination of properties I needed (width, aspect-ratio, object-fit) so I'd end up with a stretched image or random empty space I couldn't explain. After a lot of trial and error it finally clicked how these properties actually work together.
+
+After the layout and image were done, I added a box shadow to the card and hover/focus states on the button to finish it off.
 
 ### Built with
 
@@ -45,68 +51,34 @@ First, I built the html structure properly to make the styling easier. After tha
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- `<picture>` element for art-directed responsive images
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+I learned how to use aspect-ratio and object-fit together in order to maximize the responsiveness of my images.
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.wrapper picture img {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  aspect-ratio: 1 / 1.5;
+  object-fit: cover;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Before this project I only knew about max-width: 100% for images, so I didn't understand why my images kept looking wrong on different screen sizes. Now I know aspect-ratio controls the shape of the image box, and object-fit: cover crops the actual image to fill that shape without stretching it. I also learned things like margin collapsing and when to let a container size itself based on its content instead of forcing a fixed height on it.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+I'll keep on practicing responsive layout so I can improve. This is a huge challenge for me because as a newbie, being exposed to a lot of code for a long time makes me confused and scatters my thoughts. This project was a good opportunity for me to hone my debugging skills in this area.
 
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+- I used Claude AI to brainstorm solutions for the problems I faced.
+- I mostly asked it to explain why something was breaking instead of just asking for the fix, so I could actually understand concepts like grid vs flex behavior, margin collapsing, and how aspect-ratio and object-fit work together. It was hard but this project taught me a lot with the help of AI.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@Zzzylo](https://www.frontendmentor.io/profile/Zzzylo)
+- LinkedIn - [Zylo Lanard Vilarde](https://www.linkedin.com/in/zylo-lanard-vilarde-454aa5419/)

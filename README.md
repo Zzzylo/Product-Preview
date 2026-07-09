@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./image.png)
+![Product Preview](pradak.png)
 
 ### Links
 

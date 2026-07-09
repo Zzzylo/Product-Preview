@@ -83,7 +83,8 @@ h1 {
   margin: 0;
   padding: 0.5rem 0;
 }
-.price-wrapper a:hover button {
+.price-wrapper a:hover button,
+.price-wrapper a:focus button {
   transition: all 0.1s ease-in-out;
   background-color: var(--Green-700);
   cursor: pointer;

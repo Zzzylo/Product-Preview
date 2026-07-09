@@ -59,6 +59,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.5fr 0.3fr;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
 .wrapper img {
   display: block;
@@ -69,7 +70,7 @@ h1 {
   grid-row: 1/2;
 }
 .text-wrapper {
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   grid-row: 2/3;
   width: min(100%, 40rem);
 }
@@ -82,19 +83,27 @@ h1 {
   margin: 0;
   padding: 0.5rem 0;
 }
+.price-wrapper a:hover button {
+  transition: all 0.1s ease-in-out;
+  background-color: var(--Green-700);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px var(--Green-500);
+}
 .text-wrapper button {
+  font-weight: var(--fw-bold);
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 20rem;
   width: 100%;
   gap: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   color: var(--White);
   background-color: var(--Green-500);
   border: none;
   justify-self: left;
+  transition: all 0.1s ease-in-out;
 }
 .text-wrapper .price {
   padding-left: 0;
